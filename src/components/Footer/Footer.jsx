@@ -47,8 +47,8 @@ const Footer = () => {
 
           <FooterItem>
             <FooterInfoQr>
-              <img src="./src/source_img/data_qr.jpg"/>
-              <img src="./src/source_img/pagoseguro.png"/>
+              <img src="data_qr.jpg"/>
+              <img src="pagoseguro.png"/>
             </FooterInfoQr>
           </FooterItem>
         </GridStyle>

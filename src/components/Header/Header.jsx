@@ -10,7 +10,7 @@ const Header = () => {
         <HeaderHolder>
             <HeaderInnerLeft>
                 <NavbarIcon show="--mobile"><RiMenu2Line /></NavbarIcon>
-                <a className='logo' href="#"><img src="./src/source_img/logo-tienda.png"/></a>
+                <a className='logo' href="#"><img src="logo-tienda.png"/></a>
             </HeaderInnerLeft>
             <HeaderInnerCenter>
                 <input type="text" placeholder="¿Qué estás buscando?" aria-label="¿Qué estás buscando?" required=""></input>

@@ -8,7 +8,7 @@ import Button from '../../atoms/Button/Button';
 const Hero = () => {
   const style = {
     backgroundImage: {
-      backgroundImage: "url(./src/source_img/img_hero_1.jpg)",
+      backgroundImage: "url(img_hero_1.jpg)",
     }, 
   };
 
