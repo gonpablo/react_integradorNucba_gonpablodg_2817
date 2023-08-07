@@ -3,9 +3,10 @@ import { ButtonsContainerStyle } from './ButtonsContainerStyles'
 
 const ButtonsContainer = ({
     children,
+    className
 }) => {
   return (
-    <ButtonsContainerStyle>
+    <ButtonsContainerStyle className={className}>
         {children}
     </ButtonsContainerStyle>
   )
