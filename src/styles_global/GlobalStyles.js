@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
   --c-success: #00a650;
   --c-success-light: #a1dfaf;
   --c-success-bg: #ddf8e3;
-  --c-featured: #f35d06;
+  --c-featured: #f30660;
   --c-whatsapp: #00c046;
   --c-whatsapp-hover: #05a03e;
   --c-contact: #005CA4;
@@ -167,13 +167,6 @@ select {
 }
 
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -188,7 +181,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: 1px dotted;
 }
 
 
@@ -229,7 +222,6 @@ textarea {
 
 
 [type="search"] {
-  -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 

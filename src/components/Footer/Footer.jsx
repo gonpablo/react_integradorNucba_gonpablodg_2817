@@ -1,15 +1,15 @@
 import React from 'react'
 import { FooterHolder, FooterInfoQr, FooterItem, FooterItemSocial, FooterNavbar, FooterStyle, FooterTitle } from './FooterStyles'
-import { GridStyle } from '../../layout/GridStyles'
 import SocialIcons from '../../atoms/SocialIcons/SocialIcons'
 import NavBarSecondaryLink from '../../atoms/NavBarSecondaryLink/NavBarSecondaryLink'
 import { RiFacebookFill, RiInstagramFill, RiYoutubeFill } from "react-icons/ri"
+import Grid from '../../layout/Grid'
 
 const Footer = () => {
   return (
     <FooterStyle>
       <FooterHolder>
-        <GridStyle gridxl='4' gridmd='2' gridsm='1' footer='true'>
+        <Grid gridxl='4' gridmd='2' gridsm='1' footer='true'>
           <FooterItem>
             <FooterTitle>Seguinos en</FooterTitle>
             <FooterItemSocial>
@@ -51,7 +51,7 @@ const Footer = () => {
               <img src="pagoseguro.png"/>
             </FooterInfoQr>
           </FooterItem>
-        </GridStyle>
+        </Grid>
       </FooterHolder>
     </FooterStyle>
   )

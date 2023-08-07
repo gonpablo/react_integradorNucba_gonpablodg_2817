@@ -32,6 +32,15 @@ export const ButtonStyle = styled.button`
             background-color: var(--c-primary-hover);
         }
     }
+
+    &.grey {
+        background-color: var(--c-grey-5);
+        color: var(--c-grey-90);
+
+        &:hover {
+            background-color: var(--c-grey-20);
+        }
+    }
 `;
 
 

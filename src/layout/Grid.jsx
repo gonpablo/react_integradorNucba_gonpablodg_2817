@@ -6,12 +6,14 @@ const Grid = ({
     gridxl = '1',
     gridmd = '1',
     gridsm = '1',
+    footer = '',
 }) => {
   return (
     <GridStyle 
         gridxl={gridxl}
         gridmd={gridmd}
         gridsm={gridsm}
+        footer={footer}
     >
         {children}
     </GridStyle> 

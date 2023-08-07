@@ -73,8 +73,8 @@ export const CardInfoContainer = styled.div`
 
     & button {
         position: absolute;
-        bottom: 0.75rem;
-        right: 0.75rem;
+        bottom: 0.65rem;
+        right: 0.65rem;
     }
 
     @media (min-width: 768px) {
@@ -119,12 +119,14 @@ export const CardInfoPrice = styled.div`
         color: var(--c-grey-50);
         font-weight: var(--f-regular);
         margin-right: 0.5rem;
+        margin-bottom: 0.08rem;
     }
 
     & .--normal {
         display: flex;
-        align-items: center;
-        font-size: 1.125rem;
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 1.06rem;
         color: var(--c-grey-100);
         font-weight: var(--f-bold);
         line-height: 1.15;
@@ -137,6 +139,45 @@ export const CardInfoPrice = styled.div`
 
         & .--normal {
             font-size: 1.25rem;
+            flex-direction: row;
+            align-items: center;
         }
+    }
+`;
+
+export const CardInfoTag = styled.span`
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    font-size: 0.62rem;
+    display: block;
+    font-weight: var(--f-medium);
+    width: fit-content;
+    border-radius: 0.3125rem;
+    padding: 0.3125rem 0.5rem;
+    line-height: 1;
+    background-color: var(--c-featured);
+    color: var(--c-grey-100);
+
+    @media (min-width: 768px) {
+        font-size: 0.75rem;
+        top: 1rem;
+        left: 1rem;
+        padding: 0.375rem 0.625rem;
+    }
+`;
+
+export const CardInfoTextOffert = styled.span`
+    font-size: 0.7rem;
+    line-height: 1.4;
+    font-weight: var(--f-bold);
+    color: var(--c-discount);
+    margin-top: 0.25rem;
+
+    @media (min-width: 768px) {
+        font-size: 0.875rem;
+        line-height: 1.45;
+        margin-top: 0rem;
+        margin-left: 0.5rem;
     }
 `;
