@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { MenuMobileFooter, MenuMobileNav, MenuMobileStyles, MenuMobileTop } from './MenuMobileStyles'
 import { RiCloseLine, RiBuilding4Line, RiMailLine } from "react-icons/ri";
-import NavBarSecondaryLink from '../../atoms/NavbarSecondaryLink/NavbarSecondaryLink';
+import NavbarSecLink from '../../atoms/NavbarSecLink/NavbarSecLink';
 import NavbarPrimary from '../NavbarPrimary/NavbarPrimary';
 import Context from '../../context/Context';
 
@@ -24,8 +24,8 @@ const MenuMobile = () => {
 
         <MenuMobileFooter>
           <ul>
-            <NavBarSecondaryLink backTo="/nosotros"><RiBuilding4Line/>Nosotros</NavBarSecondaryLink>
-            <NavBarSecondaryLink backTo="/contacto"><RiMailLine/>Contacto</NavBarSecondaryLink>
+            <NavbarSecLink backTo="/nosotros"><RiBuilding4Line/>Nosotros</NavbarSecLink>
+            <NavbarSecLink backTo="/contacto"><RiMailLine/>Contacto</NavbarSecLink>
           </ul>
         </MenuMobileFooter>
     </MenuMobileStyles>

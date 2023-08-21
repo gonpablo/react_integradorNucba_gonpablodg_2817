@@ -31,9 +31,9 @@ const Footer = () => {
             <FooterTitle>Secciones</FooterTitle>
             <FooterNavbar>
               <ul>
-                <NavBarSecondaryLink backTo="/nosotros">Nosotros</NavBarSecondaryLink>
-                <NavBarSecondaryLink backTo="/contacto">Contacto</NavBarSecondaryLink>
-                <NavBarSecondaryLink>Boton de arrepentimiento</NavBarSecondaryLink>
+                <NavbarSecLink backTo="/nosotros">Nosotros</NavbarSecLink>
+                <NavbarSecLink backTo="/contacto">Contacto</NavbarSecLink>
+                <NavbarSecLink>Boton de arrepentimiento</NavbarSecLink>
               </ul>
             </FooterNavbar>
           </FooterItem>
