@@ -1,7 +1,7 @@
 import React from 'react'
 import { FooterHolder, FooterInfoQr, FooterItem, FooterItemSocial, FooterNavbar, FooterStyle, FooterTitle } from './FooterStyles'
 import SocialIcons from '../../atoms/SocialIcons/SocialIcons'
-import NavBarSecondaryLink from '../../atoms/NavbarSecondaryLink/NavbarSecondaryLink'
+import NavbarSecondaryLink from '../../atoms/NavbarSecondaryLink/NavbarSecondaryLink'
 import { RiFacebookFill, RiInstagramFill, RiYoutubeFill } from "react-icons/ri"
 import Grid from '../../layout/Grid'
 import Copyright from '../../molecules/Copyright/Copyright'
@@ -16,12 +16,12 @@ const Footer = () => {
             <FooterTitle>Categorias</FooterTitle>
             <FooterNavbar> 
               <ul>
-                <NavBarSecondaryLink backTo="/productos">Mundo abierto</NavBarSecondaryLink>
-                <NavBarSecondaryLink backTo="/productos">Plataformas</NavBarSecondaryLink>
-                <NavBarSecondaryLink backTo="/productos">Deportes</NavBarSecondaryLink>
-                <NavBarSecondaryLink backTo="/productos">FPS</NavBarSecondaryLink>
-                <NavBarSecondaryLink backTo="/productos">Aventura</NavBarSecondaryLink>
-                <NavBarSecondaryLink backTo="/productos">Terror</NavBarSecondaryLink>
+                <NavbarSecondaryLink backTo="/productos">Mundo abierto</NavbarSecondaryLink>
+                <NavbarSecondaryLink backTo="/productos">Plataformas</NavbarSecondaryLink>
+                <NavbarSecondaryLink backTo="/productos">Deportes</NavbarSecondaryLink>
+                <NavbarSecondaryLink backTo="/productos">FPS</NavbarSecondaryLink>
+                <NavbarSecondaryLink backTo="/productos">Aventura</NavbarSecondaryLink>
+                <NavbarSecondaryLink backTo="/productos">Terror</NavbarSecondaryLink>
               </ul>
             </FooterNavbar>
           </FooterItem>
