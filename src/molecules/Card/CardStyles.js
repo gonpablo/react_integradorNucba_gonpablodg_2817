@@ -34,7 +34,7 @@ export const CardImageContainer = styled.div`
     overflow: hidden;
     position: relative;
     border-bottom: 0.0625rem solid var(--c-grey-10);
-    background-color: var(--c-grey-100);
+    background-color: var(--c-grey-0);
 
     & img {
         width: 100%;
@@ -59,7 +59,7 @@ export const CardImageContainer = styled.div`
     }
 
     @media (min-width: 1266px) {
-        height: 19.5rem;
+        height: 18.5rem;
     }
 `;
 

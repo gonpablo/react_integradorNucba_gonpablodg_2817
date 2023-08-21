@@ -4,10 +4,11 @@ import { SocialStyle } from './SocialIconsStyles'
 
 const SocialIcons = ({
   children,
-  url,
+  backTo,
+  color = '',
 }) => {
   return (
-      <SocialStyle href={url}>{children}</SocialStyle>
+      <SocialStyle color={color} to={backTo}>{children}</SocialStyle>
   )
 }
 

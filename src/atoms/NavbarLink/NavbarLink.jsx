@@ -1,21 +1,17 @@
 import React from 'react'
-import { NavbarLinkStyle, NavbarLinkStyleFeatured } from './NavbarLinkStyles'
+import { NavbarLinkHref, NavbarLinkStyle } from './NavbarLinkStyles'
 
 const NavbarLink = ({
     children,
     show = '',
     featured = '',
+    backTo,
   }) => {
-      switch(featured) { 
-        case 'true':
-        return <NavbarLinkStyleFeatured className={show}>
-              <a href="#">{children}</a>
-              </NavbarLinkStyleFeatured>
-        default:
-            return <NavbarLinkStyle className={show}>
-            <a href="#">{children}</a>
-            </NavbarLinkStyle>
-      }
+
+        return ( <NavbarLinkStyle className={show}>
+                  <NavbarLinkHref featured={featured} to={backTo}>{children}</NavbarLinkHref>
+                </NavbarLinkStyle>
+     )
         
   }
 

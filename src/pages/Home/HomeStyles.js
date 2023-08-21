@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 
-
-export const ButtonsContainerStyle = styled.div`
+export const HomeButtonsContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;

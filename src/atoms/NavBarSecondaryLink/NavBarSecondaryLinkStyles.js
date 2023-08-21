@@ -1,25 +1,33 @@
 import { styled } from "styled-components";
-
+import { NavLink } from 'react-router-dom';
 
 export const NavBarSecondaryLinkStyle = styled.li`
     list-style: none;
+`;
 
-    & a {
-        display: inline-flex;
-        align-items: center;
+export const NavBarSecondaryLinkHref = styled(NavLink)`
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9375rem;
+    color: var(--c-grey-80);
+    font-weight: var(--f-medium);
+    text-decoration: underline;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+        opacity: 0.75;
+    }
+
+    & svg {
+        vertical-align: center;
         font-size: 0.9375rem;
-        color: var(--c-grey-80);
-        font-weight: var(--f-medium);
-        text-decoration: underline;
-        transition: all 0.4s ease-in-out;
-
-        &:hover {
-            opacity: 0.75;
-        }
+        margin-right: 0.5rem;
     }
 
     @media (min-width: 768px) {
-        & a {
+        font-size: 1rem;
+
+        & svg {
             font-size: 1rem;
         }
     }

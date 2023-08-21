@@ -292,14 +292,20 @@ ul, ol, dd {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-size: inherit;
-  font-weight: inherit;
+  line-height: 1.3;
+  font-weight: var(--f-bold);
+}
+
+h1 {
+    font-size: 1.8rem;
+
+    @media (min-width: 768px) {
+      font-size: 3.125rem;
+    }
 }
 
 h2 {
   font-size: 1.375rem;
-  font-weight: var(--f-bold);
-  line-height: 1.3;
 
   & strong {
     color: var(--c-primary);
@@ -308,6 +314,14 @@ h2 {
 
   @media (min-width: 768px) {
     font-size: 1.875rem;
+  }
+}
+
+h3 {
+  font-size: 1.1875rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.375rem;
   }
 }
 
@@ -344,12 +358,16 @@ body {
   font-weight: var(--f-regular);
   color: var(--c-grey-100);
   background-color: var(--c-grey-000);
-  font-size: 1rem;
+  font-size: 0.85rem;
   margin: 0;
   overflow-x: hidden;
   position: relative;
   margin: 0rem;
-  line-height: 1.3;
+  line-height: 1.35;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 .--mb0 {

@@ -14,7 +14,7 @@ export const HeroStyle = styled.section`
     height: 16.25rem;
     max-width: var(--l-container-width);
     margin: 0 auto;
-    border-radius: 0 0 1.25rem 1.25rem;
+    border-radius: 0;
 
     &::after {
       content: '';
@@ -62,8 +62,6 @@ export const HeroHolder = styled.div`
   margin: 0 auto;
 
   & h1 {
-    font-size: 1.75rem;
-    font-weight: var(--f-bold);
     color: var(--c-grey-100);
     line-height: 1.1;
     margin-bottom: 0.625rem;
@@ -84,9 +82,6 @@ export const HeroHolder = styled.div`
   }
 
   @media (min-width: 768px) {
-    & h1 {
-      font-size: 3.125rem;
-    }
 
     & p {
       font-size: 1.375rem;

@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 
 export const CopyrightStyle = styled.div`
     background-color: var(--c-grey-5);
-    padding: 1.125rem 0.9375rem 3.4375rem 0.9375rem;
+    padding: 1.5rem 0.9375rem 3.4375rem 0.9375rem;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,14 +1,15 @@
 import React from 'react'
-import { NavBarSecondaryLinkStyle } from './NavBarSecondaryLinkStyles'
+import { NavBarSecondaryLinkHref, NavBarSecondaryLinkStyle } from './NavbarSecondaryLinkStyles'
 
-const NavBarSecondaryLink = ({
+const NavbarSecondaryLink = ({
     children,
+    backTo,
 }) => {
   return (
     <NavBarSecondaryLinkStyle>
-        <a href="#">{children}</a>
+        <NavBarSecondaryLinkHref to={backTo}>{children}</NavBarSecondaryLinkHref>
     </NavBarSecondaryLinkStyle>
   )
 }
 
-export default NavBarSecondaryLink
+export default NavbarSecondaryLink

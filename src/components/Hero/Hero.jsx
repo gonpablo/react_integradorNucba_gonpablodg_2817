@@ -4,17 +4,15 @@ import { HeroStyle, HeroHolder, HeroSlider } from './HeroStyles'
 import Button from '../../atoms/Button/Button';
 
 
-
 const Hero = () => {
-  const style = {
-    backgroundImage: {
-      backgroundImage: "url(img_hero_1.jpg)",
-    }, 
-  };
+  const HeroImage = {
+    backgroundImage: 'url(img_hero_1.jpg)',
+  }
 
   return (
+
     <HeroStyle>
-      <HeroSlider style={style.backgroundImage}></HeroSlider>
+      <HeroSlider style={HeroImage}></HeroSlider>
       <HeroHolder>
           <h1>TShop Games</h1>
           <p>La mayor variedad en videojuegos</p>

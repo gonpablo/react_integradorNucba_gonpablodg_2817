@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-
+import { NavLink } from 'react-router-dom';
 
 export const HeaderStyle = styled.header`
     background-color: var(--c-grey-0);
@@ -34,10 +34,14 @@ export const HeaderInnerLeft = styled.div`
     display: flex;
     align-items: center;
 
-    & .logo {
-        display: flex;
-        line-height: 0;
-    }
+    @media (min-width: 992px) {
+        margin-right: 2.8125rem;
+    } 
+`;
+
+export const HeaderLogo = styled(NavLink)`
+    display: flex;
+    line-height: 0;
 
     & img {
         transition: all 0.4s ease-out;
@@ -52,16 +56,10 @@ export const HeaderInnerLeft = styled.div`
         }
     }
 
-    @media (min-width: 992px) {
-        margin-right: 2.8125rem;
-    } 
-
     @media (max-width: 992px) {
-        & .logo {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0px);
-        }
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0px);
     }
 `;
 
