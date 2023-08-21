@@ -26,6 +26,7 @@ const Footer = () => {
             </FooterNavbar>
           </FooterItem>
 
+
           <FooterItem>
             <FooterTitle>Secciones</FooterTitle>
             <FooterNavbar>
