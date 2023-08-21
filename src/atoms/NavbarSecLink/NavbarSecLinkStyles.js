@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
 import { NavLink } from 'react-router-dom';
 
-export const NavbarSecondaryLinkStyle = styled.li`
+export const NavbarSecLinkStyle = styled.li`
     list-style: none;
 `;
 
-export const NavbarSecondaryLinkHref = styled(NavLink)`
+export const NavbarSecLinkHref = styled(NavLink)`
     display: inline-flex;
     align-items: center;
     font-size: 0.9375rem;
