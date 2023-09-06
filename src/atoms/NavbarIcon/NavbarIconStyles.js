@@ -39,6 +39,7 @@ export const NavbarIconButton = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+    cursor: pointer;
     transition: background-color 0.4s ease-in-out;
 
     &:hover {

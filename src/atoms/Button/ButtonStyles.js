@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import { NavLink } from 'react-router-dom';
 
 
 export const ButtonStyle = styled.button`
@@ -8,7 +7,7 @@ export const ButtonStyle = styled.button`
     padding: 0rem 1.5625rem;
     display: flex;
     width: fit-content;
-    border-radius: 0.3125rem;
+    border-radius: 999px;
     font-weight: var(--f-medium);
     align-items: center;
     justify-content: center;
@@ -24,12 +23,25 @@ export const ButtonStyle = styled.button`
         display: none;
     }
 
+    &:disabled {
+        cursor: not-allowed;
+    }
+
     &.primary {
         background-color: var(--c-primary);
         color: var(--c-grey-100);
 
         &:hover {
             background-color: var(--c-primary-hover);
+        }
+    }
+
+    &.secondary {
+        background-color: var(--c-primary-light);
+        color: var(--c-primary);
+
+        &:hover {
+            background-color: var(--c-primary-light-hover);
         }
     }
 

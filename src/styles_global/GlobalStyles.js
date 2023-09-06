@@ -39,7 +39,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 :root .theme {
   --c-primary: #9538ff;
-  --c-primary-hover: #5600b7;
+  --c-primary-hover: #6e19cd;
   --c-primary-medium: #cea2ff;
   --c-primary-light: #f7efff;
   --c-primary-light-hover: #e6d2ff;
@@ -218,6 +218,12 @@ textarea {
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 

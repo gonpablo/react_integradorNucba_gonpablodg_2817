@@ -6,7 +6,6 @@ import Home from '../pages/Home/Home'
 import AboutUs from '../pages/AboutUs/AboutUs'
 import Products from '../pages/Products/Products'
 import Contact from '../pages/Contact/Contact'
-import MenuMobile from '../molecules/MenuMobile/MenuMobile'
 import { AuthProvider } from '../context/Context'
 import ScrollToTop from '../functions/ScrollToTop'
 
@@ -25,7 +24,6 @@ const Routes = () => {
                     <Route path='/contacto' element={<Contact/>}/>
                 </ReactDOMRoutes>
             <Footer/>
-            <MenuMobile/>
         </AuthProvider>
     </BrowserRouter>
   )

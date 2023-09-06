@@ -5,6 +5,8 @@ import NavbarSecLink from '../../atoms/NavbarSecLink/NavbarSecLink'
 import { RiFacebookFill, RiInstagramFill, RiYoutubeFill } from "react-icons/ri"
 import Grid from '../../layout/Grid'
 import Copyright from '../../molecules/Copyright/Copyright'
+import MenuMobile from '../../molecules/MenuMobile/MenuMobile'
+import MenuCart from '../../molecules/MenuCart/MenuCart'
 
 const Footer = () => {
   return (
@@ -57,6 +59,8 @@ const Footer = () => {
       </FooterHolder>
     </FooterStyle>
     <Copyright/>
+    <MenuMobile/>
+    <MenuCart/>
     </>
   )
 }

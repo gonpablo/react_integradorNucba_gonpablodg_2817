@@ -7,7 +7,7 @@ import Context from '../../context/Context';
 
 
 const Header = () => {
-  const {openMenuMobile} = useContext(Context);
+  const {openCart, openMenuMobile} = useContext(Context);
 
   return (
     <HeaderStyle>
@@ -25,7 +25,7 @@ const Header = () => {
                     <ul>
                         <NavbarIcon backTo="/nosotros" show="--desktop"><RiBuilding4Line /></NavbarIcon>
                         <NavbarIcon backTo="/contacto" show="--desktop"><RiMailLine /></NavbarIcon>
-                        <NavbarIcon show="--dropdown"><RiShoppingCartLine /></NavbarIcon>
+                        <NavbarIcon><RiShoppingCartLine onClick={() => openCart()} /></NavbarIcon>
                     </ul>
                 </HeaderInnerNavbar>
             </HeaderInnerRight>
@@ -37,7 +37,6 @@ const Header = () => {
                 </HeaderInnerNavbar>
             </HeaderFooterHolder>
         </HeaderFooter>
-
     </HeaderStyle>
 
   )

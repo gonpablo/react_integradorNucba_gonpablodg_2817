@@ -2,24 +2,24 @@ import React from 'react'
 import { ButtonBig, ButtonSmall, ButtonStyle, ButtonUltraSmall } from './ButtonStyles'
 
 const Button = ({
+    id,
     children,
-    disabled = false,
     size = '',
     color = '',
-    url,
+    disabled,
 }) => {
 
       switch(size) { 
           case 'UltraSmall':
-              return <ButtonUltraSmall href={url} className={color}>{children}</ButtonUltraSmall>;
+              return <ButtonUltraSmall id={id} disabled={disabled} className={color}>{children}</ButtonUltraSmall>;
           case 'Small':
-              return <ButtonSmall href={url} className={color}>{children}</ButtonSmall>;
+              return <ButtonSmall id={id} disabled={disabled} className={color}>{children}</ButtonSmall>;
           case 'Big':
-              return <ButtonBig href={url} className={color}>{children}</ButtonBig>;
+              return <ButtonBig id={id} disabled={disabled} className={color}>{children}</ButtonBig>;
           case 'UltraBig':
-              return <ButtonUltraBig href={url} className={color}>{children}</ButtonUltraBig>;
+              return <ButtonUltraBig id={id} disabled={disabled} className={color}>{children}</ButtonUltraBig>;
           default:
-              return <ButtonStyle href={url} className={color}>{children}</ButtonStyle>;
+              return <ButtonStyle id={id} disabled={disabled} className={color}>{children}</ButtonStyle>;
     }
 }
 

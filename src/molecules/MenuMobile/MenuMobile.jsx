@@ -9,10 +9,10 @@ import Context from '../../context/Context';
 
 const MenuMobile = () => {
 
-  const {isActive, openMenuMobile} = useContext(Context);
+  const {isActiveMenuMobile, openMenuMobile} = useContext(Context);
+  
   return (
-
-    <MenuMobileStyles className={(isActive) ? '--active' : '' }>
+    <MenuMobileStyles className={(isActiveMenuMobile) ? '--active' : '' }>
         <MenuMobileTop>
             <RiCloseLine onClick={() => openMenuMobile()} />
             <h2>Categorias</h2>
