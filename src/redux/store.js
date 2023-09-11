@@ -4,10 +4,12 @@ import persistStore from "redux-persist/lib/persistStore"
 import storage from "redux-persist/lib/storage"
 import productsReducer from "./productsSlice/productsSlice"
 import categoriesReducer from "./categoriesSlice/categoriesSlice"
+import cartSlice from "./cartSlice/cartSlice"
 
 const reducers = combineReducers ({
     products: productsReducer,
     categories: categoriesReducer,
+    cart: cartSlice,
 });
 
 const persistConfig = {
@@ -21,6 +23,9 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 
 export const store = configureStore({
     reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        serializableCheck: false
+    })
 });
 
 

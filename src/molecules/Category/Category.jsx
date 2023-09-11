@@ -1,11 +1,11 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCategory } from '../../redux/categoriesSlice/categoriesSlice';
-import { ButtonCategories } from './CategoriesStyles';
+import { ButtonCategories } from './CategoryStyles';
 
 
 
-const Categories = ({id, title, category}) => {
+const Category = ({id, name, category}) => {
 
     const dispatch = useDispatch();
     const {selectedCategory} = useSelector((state) => state.categories);
@@ -14,12 +14,13 @@ const Categories = ({id, title, category}) => {
             <ButtonCategories 
                 onClick={() => dispatch(selectCategory(category))} 
                 size='Small' 
-                color={category === selectedCategory}
+                className={category === selectedCategory ? 'primary' : 'grey'}
+                disabled={category === selectedCategory ? true : false}
                 key={id}>
-                {title}
+                {name}
             </ButtonCategories>
         </>
     )
 }
 
-export default Categories
+export default Category

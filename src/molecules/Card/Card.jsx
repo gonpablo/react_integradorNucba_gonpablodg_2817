@@ -2,21 +2,22 @@ import React from 'react'
 import { CardImageContainer, CardInfoCategories, CardInfoContainer, CardInfoPrice, CardInfoTag, CardInfoTextOffert, CardInfoTitle, CardStyle } from './CardStyles'
 import Button from '../../atoms/Button/Button'
 import { RiShoppingCartLine } from "react-icons/ri";
+import { formatPrice } from '../../functions/formatPrice';
 
 
-const Card = ({id, productImg, category, name, priceNormal, priceDiscount, textOffert, featured}) => {
+const Card = ({id, productImg, category, categoryName, name, priceNormal, priceDiscount, textOffert, featured}) => {
   return (
-    <CardStyle id={id}>
+    <CardStyle id={id} name={category}>
       <CardImageContainer>
         <img src={productImg}/>
         {featured ? <CardInfoTag>Destacado</CardInfoTag> : ''}
       </CardImageContainer>
       <CardInfoContainer>
-        <CardInfoCategories>{category}</CardInfoCategories>
+        <CardInfoCategories>{categoryName}</CardInfoCategories>
         <CardInfoTitle>{name}</CardInfoTitle>
         <CardInfoPrice>
-          <p className='--discount'>{priceDiscount}</p>
-          <p className='--normal'>{priceNormal} {textOffert ? <CardInfoTextOffert>{textOffert}</CardInfoTextOffert> : ''}</p>
+          {priceDiscount ? <p className='--discount'>{formatPrice(priceDiscount)}</p> : ''}
+          <p className='--normal'>{formatPrice(priceNormal)} {textOffert ? <CardInfoTextOffert>{textOffert}</CardInfoTextOffert> : ''}</p>
         </CardInfoPrice>
         <Button size='UltraSmall' color='primary'><RiShoppingCartLine/><span>Agregar</span></Button>
       </CardInfoContainer>

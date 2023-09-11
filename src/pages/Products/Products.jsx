@@ -9,6 +9,7 @@ import Filters from '../../molecules/Filters/Filters'
 import { FiltersItemInner, FiltersItemInnerLink, FiltersItemTitle } from '../../molecules/Filters/FiltersStyles'
 import Checkbox from '../../atoms/Checkbox/Checkbox'
 import Item from '../../layout/Item'
+import CardsRender from '../../molecules/Card/CardsRender'
 
 const Products = () => {
 
@@ -54,11 +55,7 @@ const handleChange = (event) => {
                 <Item>
                     <p className='--mb35'>Se han encontrado <strong>16 juegos</strong> disponibles</p>
                     <Grid gridxl='3' gridmd='3' gridsm='2'>
-                    {
-                        productsBD.map((prod) => {
-                            return <Card key={prod.id } {...prod} />  
-                        })
-                    }
+                        <CardsRender/>
                     </Grid>
                 </Item>
             </ProductsGrid>
