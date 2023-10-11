@@ -8,6 +8,7 @@ import Products from '../pages/Products/Products'
 import Contact from '../pages/Contact/Contact'
 import { AuthProvider } from '../context/Context'
 import ScrollToTop from '../functions/ScrollToTop'
+import SuccessPurchase from '../pages/SuccessPurchase/SuccessPurchase'
 
 
 
@@ -22,6 +23,7 @@ const Routes = () => {
                     <Route path='/nosotros' element={<AboutUs/>}/>
                     <Route path='/productos' element={<Products/>}/>
                     <Route path='/contacto' element={<Contact/>}/>
+                    <Route path='/compra-exitosa' element={<SuccessPurchase/>}/>
                 </ReactDOMRoutes>
             <Footer/>
         </AuthProvider>

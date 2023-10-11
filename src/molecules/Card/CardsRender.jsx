@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 import Context from '../../context/Context'
 
 
-
 const CardsRender = () => {
     let products = useSelector((state) => state.products.products);
     const {selectedCategory} = useSelector((state) => state.categories);

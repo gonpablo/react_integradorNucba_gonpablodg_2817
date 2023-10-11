@@ -3,10 +3,10 @@ import { Holder, SectionStyle } from './SectionStyles'
 
 const Section = ({
     children,
-    featured = false,
+    topmargin = false,
 }) => {
   return (
-    <SectionStyle className={featured}>
+    <SectionStyle topmargin={+topmargin}>
         <Holder>
             {children}
         </Holder>

@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
   --c-discount-bg: #d4ffe9;
   --c-error: #bd2800;
   --c-error-light: #ffbfbf;
-  --c-error-bg: #ffe6e6;
+  --c-error-bg: #4b1e1e;
   --c-success: #00a650;
   --c-success-light: #a1dfaf;
   --c-success-bg: #ddf8e3;
@@ -355,6 +355,27 @@ address {
 
 button:active, button:focus, a:active, a:focus, input:active, input:focus, select:active, select:focus, textarea:active, textarea:focus {
   outline: none;
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    }
+    @keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 

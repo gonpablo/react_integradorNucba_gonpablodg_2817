@@ -67,10 +67,6 @@ export const FiltersItemInner = styled.div`
 `;
 
 
-export const FiltersItemInnerLink = styled.a`
-    font-size: 0.875rem;
-    color: var(--c-grey-100);
-`;
 
 export const FiltersItemTitle = styled.legend`
     font-size: 1rem;

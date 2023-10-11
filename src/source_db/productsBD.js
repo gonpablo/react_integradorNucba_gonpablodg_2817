@@ -75,7 +75,7 @@ export const productsBD = [
 		categoryName: productsCategoriesBD[1].name,
 		name: "The Witcher 3: Wild Hunt",
 		priceNormal: 399.000,
-        priceDiscount: 379.180,
+        priceDiscount: 379.000,
 		textOffert: "10% OFF",
         featured: true,
 	},
@@ -99,7 +99,7 @@ export const productsBD = [
 		categoryName: productsCategoriesBD[2].name,
 		name: "Psychonauts 2",
 		priceNormal: 110.000,
-        priceDiscount: 94.270,
+        priceDiscount: 94.000,
 		textOffert: "15% OFF",
         featured: false,
 	},
@@ -110,7 +110,7 @@ export const productsBD = [
         category: productsCategoriesBD[2].category,
 		categoryName: productsCategoriesBD[2].name,
 		name: "Hollow Knight",
-		priceNormal: 381.934,
+		priceNormal: 381.000,
         priceDiscount: null,
 		textOffert: null,
         featured: true,
@@ -122,7 +122,7 @@ export const productsBD = [
         category: productsCategoriesBD[2].category,
 		categoryName: productsCategoriesBD[2].name,
 		name: "9 Years of Shadows",
-		priceNormal: 742.828,
+		priceNormal: 742.000,
         priceDiscount: null,
 		textOffert: null,
         featured: false,
@@ -134,8 +134,8 @@ export const productsBD = [
         category: productsCategoriesBD[3].category,
 		categoryName: productsCategoriesBD[3].name,
 		name: "EA Sports FIFA 23",
-		priceNormal: 8.550,
-        priceDiscount: 6.562,
+		priceNormal: 8.500,
+        priceDiscount: 6.500,
 		textOffert: "5% OFF",
         featured: true,
 	},
@@ -146,7 +146,7 @@ export const productsBD = [
         category: productsCategoriesBD[3].category,
 		categoryName: productsCategoriesBD[3].name,
 		name: "Virtua Tennis 4",
-		priceNormal: 15.790,
+		priceNormal: 15.700,
         priceDiscount: null,
 		textOffert: null,
         featured: false,
@@ -159,7 +159,7 @@ export const productsBD = [
 		categoryName: productsCategoriesBD[4].name,
 		name: "DOOM Eternal",
 		priceNormal: 7.200,
-        priceDiscount: 4.069,
+        priceDiscount: 4.000,
 		textOffert: "20% OFF",
         featured: false,
 	},
@@ -171,7 +171,7 @@ export const productsBD = [
         category: productsCategoriesBD[4].category,
 		categoryName: productsCategoriesBD[4].name,
 		name: "Wolfenstein: The New Order",
-		priceNormal: 18.325,
+		priceNormal: 18.000,
         priceDiscount: null,
 		textOffert: null,
         featured: true,
@@ -183,7 +183,7 @@ export const productsBD = [
         category: productsCategoriesBD[4].category,
 		categoryName: productsCategoriesBD[4].name,
 		name: "Max Payne 3",
-		priceNormal: 37.610,
+		priceNormal: 37.500,
         priceDiscount: null,
 		textOffert: null,
         featured: false,
@@ -195,8 +195,8 @@ export const productsBD = [
         category: productsCategoriesBD[4].category,
 		categoryName: productsCategoriesBD[4].name,
 		name: "Half-Life 2",
-		priceNormal: 18.500,
-        priceDiscount: 11.738,
+		priceNormal: 18.000,
+        priceDiscount: 11.000,
 		textOffert: "15% OFF",
         featured: true,
 	},
@@ -227,10 +227,3 @@ export const productsBD = [
 ];
 
 
-/*
-export const CategoriesProducts = productsBD.filter((item) => {
-	return item.category
-});
-
-console.log(CategoriesProducts);
-console.log(productsBD); */

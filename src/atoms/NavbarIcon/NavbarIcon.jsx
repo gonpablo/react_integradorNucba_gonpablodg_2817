@@ -1,11 +1,12 @@
 import React from 'react'
-import { NavbarIconButton, NavbarIconLinkHref, NavbarIconStyle } from './NavbarIconStyles'
+import { NavbarIconButton, NavbarIconCountCart, NavbarIconLinkHref, NavbarIconStyle } from './NavbarIconStyles'
 
 
 const NavbarIcon = ({
   children,
   show = '',
   backTo = '',
+  quantity,
 }) => {
   {
   if (backTo != '') {
@@ -18,6 +19,7 @@ const NavbarIcon = ({
       return ( 
         <NavbarIconStyle className={show}>
           <NavbarIconButton>{children}</NavbarIconButton>
+          { quantity ? <NavbarIconCountCart>{quantity}</NavbarIconCountCart> : ''}
         </NavbarIconStyle>
       )
   }

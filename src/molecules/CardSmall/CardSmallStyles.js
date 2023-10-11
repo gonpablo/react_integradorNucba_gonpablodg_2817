@@ -41,18 +41,20 @@ export const CardSmallInfo = styled.div`
     flex-direction: column;
     flex: 1;
 
-    & svg {
-        position: absolute;
-        right: 0rem;
-        top: 0rem;
-        font-size: 1.25rem;
-        color: var(--c-grey-80);
-    }
-
     @media (min-width: 768px) {
         padding-left: 1.25rem;
         padding-top: 0.2rem;
         padding-bottom: 0.2rem;
+    }
+`;
+
+export const CardSmallBtnDelete = styled.button`
+    & svg {
+        position: absolute;
+        cursor: pointer;
+        right: 0rem;
+        top: 0rem;
+        font-size: 1.25rem;
     }
 `;
 

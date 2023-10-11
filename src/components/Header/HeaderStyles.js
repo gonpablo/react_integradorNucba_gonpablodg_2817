@@ -112,7 +112,9 @@ export const HeaderInnerRight = styled.div`
 export const HeaderInnerNavbar = styled.nav`
         display: flex;
         align-items: center;
+        justify-content: space-between;
         height: 100%;
+        width: 100%;
         grid-gap: 0.375rem;
 
         & ul {
@@ -127,6 +129,7 @@ export const HeaderFooter = styled.div`
     display: inline-flex;
     width: 100%;
     border-top: 0.0625rem solid var(--c-grey-10);
+    padding: 0rem 0.9375rem;
     background-color: var(--c-grey-000);
     height: 4.0625rem;
 
@@ -136,10 +139,10 @@ export const HeaderFooter = styled.div`
 `;
 
 export const HeaderFooterHolder = styled.div`
-
+    width: 100%;
+    
     @media (min-width: 992px) {
         max-width: var(--l-container-width);
-        padding: 0rem 0.9375rem;
         margin: 0 auto;
     }
 `;

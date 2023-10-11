@@ -2,7 +2,7 @@ import React from 'react'
 import Category from './Category'
 import { useSelector } from 'react-redux'
 
-const CategoriesRender = () => {
+const CategoriesFilterRender = () => {
 const {categories} = useSelector((state) => state.categories);
 
   return (
@@ -12,4 +12,4 @@ const {categories} = useSelector((state) => state.categories);
   )
 }
 
-export default CategoriesRender
+export default CategoriesFilterRender

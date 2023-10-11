@@ -1,10 +1,11 @@
 import { styled } from "styled-components";
 
 export const SectionStyle = styled.section`
-    padding: 2.5rem 0rem;
+    padding: ${(props) => (props.topmargin ? "0rem 0rem 2.5rem 0rem;" : "2.5rem 0rem;")};
+    margin-top: ${(props) => (props.topmargin ? "-3.125rem;" : "")};
 
     @media (min-width: 768px) {
-      padding: 4.375rem 0rem;
+      padding: ${(props) => (props.topmargin ? "0rem 0rem 4.375rem 0rem;" : "4.375rem 0rem;")};
     }
 `;
 

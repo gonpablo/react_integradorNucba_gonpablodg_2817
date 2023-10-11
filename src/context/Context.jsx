@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 const Context = createContext();
-export const INITIAL_LIMIT = 16;
+export const INITIAL_LIMIT = 8;
 
 function AuthProvider( {children} ) {       
 
@@ -16,6 +16,7 @@ function AuthProvider( {children} ) {
     const openCart = () => { 
         setActiveCart(!isActiveCart);
     };
+
 
 
     const data = {

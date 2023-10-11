@@ -1,22 +1,24 @@
 import React from 'react'
-import { ModalBotton, ModalInner, ModalStyle } from './ModalStyles'
+import { ModalStyle } from './ModalStyles'
 import Button from '../../atoms/Button/Button'
-import { RiCloseFill } from "react-icons/ri";
+
 
 const Modal = ({
     children,
-    disabled = false,
+    active,
+    success,
+    cancel,
 }) => {
+
+
+
   return (
-   <ModalStyle disabled={disabled}>
-        <ModalInner disabled={disabled}>
-            <RiCloseFill/>
-            <h3 className='--mb25'>{children}</h3>
-            <ModalBotton>
-                <Button color='primary'>Si</Button>
-                <Button color='secondary'>No</Button>
-            </ModalBotton>
-        </ModalInner>
+   <ModalStyle className={!active ? '--active' : ''}>
+        <h3 className='--mb25'>{children}</h3>
+        <div>
+            <Button size='Small' color='secondary' onClick={cancel}>No</Button>
+            <Button size='Small' color='primary' onClick={success}>Si</Button>
+        </div>
     </ModalStyle>
   )
 }

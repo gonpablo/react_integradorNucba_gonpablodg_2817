@@ -1,13 +1,15 @@
 import React, { useContext } from 'react'
 import { HeaderFooter, HeaderFooterHolder, HeaderHolder, HeaderInnerCenter, HeaderInnerLeft, HeaderInnerNavbar, HeaderInnerRight, HeaderLogo, HeaderStyle } from './HeaderStyles';
-import { RiMenu2Line, RiBuilding4Line, RiMailLine, RiShoppingCartLine, RiSearch2Line} from "react-icons/ri";
+import { RiMenu2Line, RiMailLine, RiShoppingCartLine, RiSearch2Line} from "react-icons/ri";
 import NavbarIcon from '../../atoms/NavbarIcon/NavbarIcon';
 import NavbarPrimary from '../../molecules/NavbarPrimary/NavbarPrimary';
 import Context from '../../context/Context';
+import { useSelector } from 'react-redux';
 
 
 const Header = () => {
   const {openCart, openMenuMobile} = useContext(Context);
+  const {totalQuantity} = useSelector((state) => state.cart);
 
   return (
     <HeaderStyle>
@@ -23,9 +25,8 @@ const Header = () => {
             <HeaderInnerRight>
                 <HeaderInnerNavbar>
                     <ul>
-                        <NavbarIcon backTo="/nosotros" show="--desktop"><RiBuilding4Line /></NavbarIcon>
-                        <NavbarIcon backTo="/contacto" show="--desktop"><RiMailLine /></NavbarIcon>
-                        <NavbarIcon><RiShoppingCartLine onClick={() => openCart()} /></NavbarIcon>
+                        <NavbarIcon backTo="/contacto" show="--desktop"><RiMailLine /></NavbarIcon> 
+                        <NavbarIcon quantity={totalQuantity}><RiShoppingCartLine onClick={() => openCart()} /></NavbarIcon>
                     </ul>
                 </HeaderInnerNavbar>
             </HeaderInnerRight>

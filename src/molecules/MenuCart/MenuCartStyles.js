@@ -175,3 +175,58 @@ export const MenuCartOverlay = styled.div`
         opacity: 1;
     }
 `;
+
+export const MenuCartModalAlert = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121e8;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    & div {
+        display: flex;
+        grid-gap: 10px;
+        align-items: center;
+    }
+`;
+
+export const MenuCartLoading = styled.div`
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: -1;
+
+    &.--active {
+        background-color: #000000c4;
+        z-index: 10;
+
+        &:before {
+            width: 4.125rem;
+            height: 4.125rem;
+            border-radius: 50%;
+            position: absolute;
+            content: "";
+            border: 0.4rem solid var(--c-grey-100);
+            -webkit-clip-path: inset(0 0 50% 0);
+            clip-path: inset(0 0 50% 0);
+            transform: rotate(0);
+            -webkit-animation: spin .6s linear infinite;
+            animation: spin .6s linear infinite;
+        }
+
+    }
+
+    
+
+`;

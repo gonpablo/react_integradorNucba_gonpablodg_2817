@@ -32,6 +32,10 @@ export const QuantityButton = styled.button`
     border-radius: 0.375rem;
     cursor: pointer;
 
+    &:disabled {
+        cursor: not-allowed;
+    }
+
     @media (min-width: 768px) {
         font-size: 1.2rem;
     }

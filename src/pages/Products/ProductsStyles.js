@@ -10,3 +10,10 @@ export const ProductsGrid = styled.div`
         grid-gap: 3.125rem;
     }
 `;
+
+export const ProductsButtonsBottom = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+`;

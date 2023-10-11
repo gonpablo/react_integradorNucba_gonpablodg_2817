@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeaderPage from '../../molecules/HeaderPage/HeaderPage'
 import Section from '../../layout/Section'
 import Grid from '../../layout/Grid'
 import Item from '../../layout/Item'
-import { ContactFormContainer, ContactInfo, ContactSocial } from './ContactStyles'
+import {ContactInfo, ContactSocial, Form, Formik } from './ContactStyles'
 import { RiMapPinLine, RiWhatsappLine, RiMailLine, RiFacebookFill, RiInstagramFill, RiYoutubeFill } from "react-icons/ri";
 import SocialIcons from '../../atoms/SocialIcons/SocialIcons'
 import Input from '../../atoms/Input/Input'
-import Button from '../../atoms/Button/Button'
-
+import { contactInitialValues } from '../../formik/InitialValues'
+import { contactValidationSchema } from '../../formik/ValidationSchema'
+import Submit from '../../atoms/Button/Submit'
+import Alert from '../../atoms/Alert/Alert'
 
 const Contact = () => {
+
+  const [alertState, setAlertState] = useState(false)
+
   return (
     <>
     <HeaderPage backTo="/">Contacto</HeaderPage>
@@ -36,13 +41,46 @@ const Contact = () => {
         <Item>
             <h3 className='--mb6'>Contactate con nosotros</h3>
             <p className='--mb25'>Para contactarse con nosotros, completa el siguiente <strong>formulario de contacto</strong></p>
-            <ContactFormContainer>
-                <Input type="text">Nombre</Input>
-                <Input type="text">Apellido</Input>
-                <Input type="email" full='true'>Email</Input>
-                <Input type="textarea" full='true'>Mensaje</Input>
-                <Button color='primary'>Enviar mensaje</Button>
-            </ContactFormContainer>
+            <Formik
+                initialValues= {contactInitialValues}
+                validationSchema= {contactValidationSchema}
+                onSubmit={(values, {setSubmitting, resetForm }) => {
+                    setSubmitting = false;
+                    
+                    setTimeout(() => {
+                      setSubmitting = true;
+                      setAlertState(true);
+                      resetForm({values: ''});
+                    }, 3200);
+                    
+                  
+                    setTimeout(() => {
+                      setAlertState(false);
+                    }, 6600);
+                }
+              }
+            >
+              {
+                ({isSubmitting}) => (
+                  <Form>
+                    <Input name="nombre" htmlFor="nombre" type="text" id="nombre">Nombre</Input>
+                    <Input name="apellido" htmlFor="apellido" type="text" id="apellido">Apellido</Input>
+                    <Input name="email" htmlFor="email" type="email" id="email" full='true'>Email</Input>
+                    <Input name="mensaje" htmlFor="mensaje" type="textarea" id="mensaje" full='true'>Mensaje</Input>
+                    {
+                      isSubmitting ? 
+                          <Submit color='primary' loading="true">Enviar mensaje</Submit>
+                      : 
+                          <>
+                            <Submit color='primary'>Enviar mensaje</Submit>
+                            {alertState ? <Alert>El mensaje se ha enviado exitosamente</Alert> : ''} 
+                          </>
+                    }
+                    
+                  </Form>                   
+                )}
+            </Formik> 
+            
         </Item>
       </Grid>
     </Section>

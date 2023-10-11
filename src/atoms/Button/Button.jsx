@@ -7,19 +7,23 @@ const Button = ({
     size = '',
     color = '',
     disabled,
+    hidden = false,
+    loading,
+    type,
+    onClick  = (e) => e.preventDefault(), 
 }) => {
 
       switch(size) { 
           case 'UltraSmall':
-              return <ButtonUltraSmall id={id} disabled={disabled} className={color}>{children}</ButtonUltraSmall>;
+              return <ButtonUltraSmall id={id} disabled={disabled} hidden={hidden} className={color} loading={loading} type={type} onClick={onClick}>{children}</ButtonUltraSmall>;
           case 'Small':
-              return <ButtonSmall id={id} disabled={disabled} className={color}>{children}</ButtonSmall>;
+              return <ButtonSmall id={id} disabled={disabled} hidden={hidden} className={color} loading={loading} type={type} onClick={onClick}>{children}</ButtonSmall>;
           case 'Big':
-              return <ButtonBig id={id} disabled={disabled} className={color}>{children}</ButtonBig>;
+              return <ButtonBig id={id} disabled={disabled} hidden={hidden} className={color} loading={loading} type={type} onClick={onClick}>{children}</ButtonBig>;
           case 'UltraBig':
-              return <ButtonUltraBig id={id} disabled={disabled} className={color}>{children}</ButtonUltraBig>;
+              return <ButtonUltraBig id={id} disabled={disabled} hidden={hidden} className={color} loading={loading} type={type} onClick={onClick}>{children}</ButtonUltraBig>;
           default:
-              return <ButtonStyle id={id} disabled={disabled} className={color}>{children}</ButtonStyle>;
+              return <ButtonStyle id={id} disabled={disabled} hidden={hidden} className={color} loading={loading} type={type} onClick={onClick}>{children}</ButtonStyle>;
     }
 }
 

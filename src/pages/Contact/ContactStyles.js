@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { Formik as ContactFormContainer, Form as FormikForm } from 'formik';
 
 export const ContactInfo = styled.ul`
     display: flex;
@@ -22,7 +23,21 @@ export const ContactInfo = styled.ul`
     }
 `;
 
-export const ContactFormContainer = styled.form`
+export const Formik = styled(ContactFormContainer)`
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 0.9375rem;
+    grid-column-gap: 0.625rem;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 1.25rem;
+        grid-column-gap: 0.75rem;
+    }
+`;
+
+export const Form = styled(FormikForm)`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 0.9375rem;
