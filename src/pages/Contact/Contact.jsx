@@ -56,7 +56,7 @@ const Contact = () => {
                   
                     setTimeout(() => {
                       setAlertState(false);
-                    }, 6600);
+                    }, 7000);
                 }
               }
             >

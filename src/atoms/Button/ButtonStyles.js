@@ -34,7 +34,6 @@ export const ButtonStyle = styled.button`
                 transform: rotate(0);
                 -webkit-animation: spin .6s linear infinite;
                 animation: spin .6s linear infinite;
-            }
         `
         }
 
