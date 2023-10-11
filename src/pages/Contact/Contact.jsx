@@ -7,8 +7,8 @@ import {ContactInfo, ContactSocial, Form, Formik } from './ContactStyles'
 import { RiMapPinLine, RiWhatsappLine, RiMailLine, RiFacebookFill, RiInstagramFill, RiYoutubeFill } from "react-icons/ri";
 import SocialIcons from '../../atoms/SocialIcons/SocialIcons'
 import Input from '../../atoms/Input/Input'
-import { contactInitialValues } from '../../formik/InitialValues'
-import { contactValidationSchema } from '../../formik/ValidationSchema'
+import { contactInitialValues } from '../../formik/initialValues'
+import { contactValidationSchema } from '../../formik/validationSchema'
 import Submit from '../../atoms/Button/Submit'
 import Alert from '../../atoms/Alert/Alert'
 
